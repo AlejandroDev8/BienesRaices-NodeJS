@@ -3,9 +3,12 @@ import userRoute from "./routes/userRoute.js";
 
 const app = express();
 
+app.set("view engine", "pug");
+app.set("views", "./views");
+
 const PORT = 3000;
 
-app.use("/", userRoute);
+app.use("/auth", userRoute);
 
 app.listen(PORT, () => {
   // Start the server on the specified port
