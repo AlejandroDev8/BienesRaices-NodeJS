@@ -1,18 +1,11 @@
 import express from "express";
+import userRoute from "./routes/userRoute.js";
 
-const app = express(); // Create an express app
+const app = express();
 
-const PORT = 3000; // Define a port to run the server on
+const PORT = 3000;
 
-// Routing
-
-app.get("/", (req, res) => {
-  res.send("Hello World on express");
-});
-
-app.get("/about", (req, res) => {
-  res.send("About page");
-});
+app.use("/", userRoute);
 
 app.listen(PORT, () => {
   // Start the server on the specified port
