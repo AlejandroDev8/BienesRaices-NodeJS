@@ -1,5 +1,7 @@
 export const formLogin = (req, res) => {
-  res.render("auth/login", {});
+  res.render("auth/login", {
+    title: "Iniciar sesión",
+  });
 };
 
 export const formRegister = (req, res) => {
