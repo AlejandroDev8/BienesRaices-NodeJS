@@ -14,5 +14,8 @@
     "Sequlize"
   ],
   "author": "AlejandroDev8",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
 }
