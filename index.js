@@ -6,9 +6,10 @@ const app = express();
 app.set("view engine", "pug");
 app.set("views", "./views");
 
-const PORT = 3000;
-
+app.use(express.static("public"));
 app.use("/auth", userRoute);
+
+const PORT = 3000;
 
 app.listen(PORT, () => {
   // Start the server on the specified port
