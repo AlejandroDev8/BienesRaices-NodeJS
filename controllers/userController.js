@@ -3,5 +3,7 @@ export const formLogin = (req, res) => {
 };
 
 export const formRegister = (req, res) => {
-  res.render("auth/register", {});
+  res.render("auth/register", {
+    title: "Crear cuenta",
+  });
 };
