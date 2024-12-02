@@ -1,7 +1,15 @@
 import express from "express";
 import userRoute from "./routes/userRoute.js";
+import database from "./config/database.js";
 
 const app = express();
+
+try {
+  await database.authenticate();
+  console.log("Database connected");
+} catch (error) {
+  console.log(error);
+}
 
 app.set("view engine", "pug");
 app.set("views", "./views");
