@@ -1,12 +1,14 @@
 import Sequelize from "sequelize";
 
-const user = "root";
-const password = "root";
-const databaseName = "bienesraices";
+const user = process.env.DB_USER;
+const password = process.env.DB_PASSWORD;
+const databaseName = process.env.DB_NAME;
+const host = process.env.DB_HOST;
+const port = process.env.DB_PORT;
 
 const database = new Sequelize(databaseName, user, password, {
-  host: "localhost",
-  port: 3306,
+  host: host,
+  port: port,
   dialect: "mysql",
   define: {
     timestamps: true,
@@ -17,7 +19,6 @@ const database = new Sequelize(databaseName, user, password, {
     acquire: 30000,
     idle: 10000,
   },
-  operatorsAliases: false,
 });
 
 export default database;
