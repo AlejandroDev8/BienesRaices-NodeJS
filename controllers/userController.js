@@ -9,3 +9,9 @@ export const formRegister = (req, res) => {
     title: "Crear cuenta",
   });
 };
+
+export const formResetPassword = (req, res) => {
+  res.render("auth/reset-password", {
+    title: "Recuperar contraseña",
+  });
+};
