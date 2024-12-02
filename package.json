@@ -4,7 +4,7 @@
   "description": "My first project with Node.js",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch index.js",
+    "dev": "node --env-file .env index.js --watch",
     "css": "postcss public/css/index.css -o public/css/app.css --watch"
   },
   "type": "module",
