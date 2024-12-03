@@ -11,7 +11,7 @@ export const formRegister = (req, res) => {
 };
 
 export const registerUser = (req, res) => {
-  console.log("Creando usuario...");
+  console.log(req.body);
 };
 
 export const formResetPassword = (req, res) => {

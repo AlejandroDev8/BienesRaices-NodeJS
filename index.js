@@ -4,6 +4,9 @@ import database from "./config/database.js";
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 try {
   await database.authenticate();
   console.log("Database connected");
