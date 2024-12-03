@@ -10,6 +10,10 @@ export const formRegister = (req, res) => {
   });
 };
 
+export const registerUser = (req, res) => {
+  console.log("Creando usuario...");
+};
+
 export const formResetPassword = (req, res) => {
   res.render("auth/reset-password", {
     title: "Recuperar contraseña",
