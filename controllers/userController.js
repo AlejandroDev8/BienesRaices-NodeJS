@@ -1,3 +1,5 @@
+import User from "../models/User.js";
+
 export const formLogin = (req, res) => {
   res.render("auth/login", {
     title: "Iniciar sesión",
@@ -10,8 +12,10 @@ export const formRegister = (req, res) => {
   });
 };
 
-export const registerUser = (req, res) => {
-  console.log(req.body);
+export const registerUser = async (req, res) => {
+  const user = await User.create(req.body);
+
+  res.json(user);
 };
 
 export const formResetPassword = (req, res) => {

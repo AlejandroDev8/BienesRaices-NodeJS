@@ -19,7 +19,7 @@ const User = database.define("users", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  tpke: {
+  token: {
     type: DataTypes.STRING,
   },
   confirmed: {

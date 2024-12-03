@@ -9,6 +9,7 @@ app.use(express.json());
 
 try {
   await database.authenticate();
+  database.sync();
   console.log("Database connected");
 } catch (error) {
   console.log(error);
